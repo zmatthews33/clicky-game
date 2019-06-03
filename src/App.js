@@ -27,7 +27,6 @@ class App extends React.Component {
     console.log(id);
   };
 
-  // when page loads shuffle through the pokemons
   componentDidMount() {
     const newSimpsonsArr = this.shuffleArr(this.state.simpsonsArr);
     this.setState({
@@ -46,3 +45,4 @@ class App extends React.Component {
 }
 
 export default App;
+
