@@ -1,11 +1,12 @@
 import React from "react";
-import Header from "./components/Header";
-import Card from "./components/Card";
+import Header from "./components/Header/Header";
+import Card from "./components/Card/Card";
+import Wrapper from "./components/Wrapper/Wrapper";
 import "./App.css";
 
-import simpsonsList from "./simpsons.json";
+import simpsons from "./simpsons.json";
 
-class App extends React.Component {
+/*class App extends React.Component {
   state = {
     simpsonsArr: simpsonsList,
     Score: 0,
@@ -44,5 +45,38 @@ class App extends React.Component {
   }
 }
 
-export default App;
+export default App;*/
 
+class App extends React.Component {
+  // Setting this.state.simpsons to the simpsons json array
+  state = {
+    simpsons
+  };
+
+  removeSimpson = id => {
+    // Filter this.state.simpsons for simpsons with an id not equal to the id being removed
+    const simpsons = this.state.simpsons.filter(simpson => simpson.id !== id);
+    // Set this.state.simpsons equal to the new simpsons array
+    this.setState({ simpsons });
+  };
+
+  // Map over this.state.simpsons and render a simpsonCard component for each simpson object
+  render() {
+    return (
+      <Wrapper>
+        <Header>Simpsons</Header>
+        {this.state.simpsons.map(simpson => (
+          <Card
+            removeSimpson={this.removeSimpson}
+            id={simpson.id}
+            key={simpson.id}
+            name={simpson.name}
+            image={simpson.image}
+          />
+        ))}
+      </Wrapper>
+    );
+  }
+}
+
+export default App;

@@ -1,0 +1,63 @@
+[
+  {
+    "id": 0,
+    "name": "Homer Simpson",
+    "image": "https://assets.fxnetworks.com/cms/prod/shows/the-simpsons/photos/simpsons-sidebar/character-facts/Homer/swsb_character_fact_homer_288x763.png"
+  },
+  {
+    "id": 1,
+    "name": "Marge Simpson",
+    "image": "https://assets.fxnetworks.com/cms/prod/shows/the-simpsons/photos/simpsons-character/Marge/swsb_character_fact_marge_288x763.png"
+  },
+  {
+    "id": 2,
+    "name": "Bart Simpson",
+    "image": "https://assets.fxnetworks.com/cms/prod/shows/the-simpsons/photos/swsb_character_fact_bart_288x763.png"
+  },
+  {
+    "id": 3,
+    "name": "Lisa Simpson",
+    "image": "https://assets.fxnetworks.com/cms/prod/shows/the-simpsons/photos/simpsons-character/Lisa/swsb_character_fact_lisa_288x763.png"
+  },
+  {
+    "id": 4,
+    "name": "Maggie Simpson",
+    "image": "https://assets.fxnetworks.com/cms/prod/shows/the-simpsons/photos/simpsons-character/Maggie/swsb_character_fact_maggie_288x763.png"
+  },
+  {
+    "id": 5,
+    "name": "Principal Skinner",
+    "image": "https://assets.fxnetworks.com/cms/prod/shows/the-simpsons/photos/swsb_character_fact_skinner_288x763.png"
+  },
+  {
+    "id": 6,
+    "name": "Groundskeeper Willie",
+    "image": "https://assets.fxnetworks.com/cms/prod/shows/the-simpsons/photos/swsb_character_fact_willie_288x763.png"
+  },
+  {
+    "id": 7,
+    "name": "Otto",
+    "image": "https://assets.fxnetworks.com/cms/prod/shows/the-simpsons/photos/swsb_character_fact_otto_288x763.png"
+  },
+  {
+    "id": 8,
+    "name": "Moe Szyslak",
+    "image": "https://assets.fxnetworks.com/cms/prod/shows/the-simpsons/photos/simpsons-character/Moe/swsb_character_fact_moe_288x763.png"
+  },
+
+  {
+    "id": 9,
+    "name": "Mr. Burns",
+    "image": "https://assets.fxnetworks.com/cms/prod/shows/the-simpsons/photos/simpsons-character/Mr-Burns/swsb_character_fact_burns_288x763.png"
+  },
+  {
+    "id": 10,
+    "name": "Krusty the Clown",
+    "image": "https://assets.fxnetworks.com/cms/prod/shows/the-simpsons/photos/simpsons-character/Krusty/swsb_character_fact_krusty_288x763.png"
+  },
+  {
+    "id": 11,
+    "name": "Ned Flanders",
+    "image": "https://assets.fxnetworks.com/cms/prod/shows/the-simpsons/photos/swsb_character_fact_nedflanders_288x763.png"
+  }
+]
