@@ -1,26 +1,48 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import Header from "./components/Header";
+import Card from "./components/Card";
+import "./App.css";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import simpsonsList from "./simpsons.json";
+
+class App extends React.Component {
+  state = {
+    simpsonsArr: simpsonsList,
+    Score: 0,
+    TopScore: 0
+  };
+  shuffleArr = arr => {
+    let newPosition, temp;
+    for (let i = arr.length - 1; i > 0; i--) {
+      newPosition = Math.floor(Math.random() * (i + 1));
+      temp = arr[i];
+      arr[i] = arr[newPosition];
+      arr[newPosition] = temp;
+    }
+    return arr;
+  };
+
+  handleClick = (event, id) => {
+    event.preventDefault();
+    console.log(id);
+  };
+
+  // when page loads shuffle through the pokemons
+  componentDidMount() {
+    const newSimpsonsArr = this.shuffleArr(this.state.simpsonsArr);
+    this.setState({
+      simpsonsArr: newSimpsonsArr
+    });
+  }
+  render() {
+    return [
+      <Header />,
+
+      <main>
+        <Card simpsons={this.state.simpsonsArr} />
+      </main>
+    ];
+  }
 }
 
 export default App;
