@@ -1,4 +1,5 @@
 import React from "react";
+import "./style.css";
 
 export default function Card(props) {
   // console.log(props)
@@ -7,7 +8,7 @@ export default function Card(props) {
       <img
         id={`simpson-card${props.id}`}
         key={props.id}
-        src={props.img}
+        src={props.image}
         alt={props.name}
         className="img-fluid"
       />

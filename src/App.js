@@ -55,7 +55,7 @@ class App extends React.Component {
     } else {
       // saving current score on a variable
       const saveScore = this.state.score;
-      const newSimpsonsArr = this.shuffleArr(this.state.SimpsonsArr);
+      const newSimpsonsArr = this.shuffleArr(this.state.simpsonsArr);
 
       if (saveScore > this.state.topScore) {
         this.setState({
@@ -64,10 +64,9 @@ class App extends React.Component {
           score: 0,
           topScore: saveScore,
           wrongClick: true,
-          message: "Doh!"
+          message: "Way to go, man!"
         });
       }
-      // else just reset the current score and keep playing the game
       this.setState({
         simpsonsArr: newSimpsonsArr,
         previewsClick: currentClick,
@@ -80,10 +79,26 @@ class App extends React.Component {
 
   render() {
     return [
-      <Header />,
+      <Header
+        score={this.state.score}
+        topScore={this.state.topScore}
+        message={this.state.message}
+      />,
 
-      <main>
-        <Card simpsons={this.state.simpsonsArr} />
+      <main
+        id="game-img"
+        className={this.state.wrongClick ? "container shake" : "container"}
+      >
+        {this.state.simpsonsArr.map((simpson, index) => (
+          <Card
+            id={simpson.id}
+            key={index}
+            src={simpson.image}
+            name={simpson.name}
+            image={simpson.image}
+            handleClick={this.handleClick}
+          />
+        ))}
       </main>
     ];
   }

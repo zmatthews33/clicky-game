@@ -1,23 +1,18 @@
-.card {
-  background: #fff;
-  border-radius: 2px;
-  height: 200px;
-  margin: 1rem;
-  position: relative;
-  width: 200px;
-  box-shadow: 0 3px 6px #999, 0 3px 6px #999;
+.card:active {
+  background: #0024f2;
+  -webkit-box-shadow: inset 0px 0px 5px #c1c1c1;
+  -moz-box-shadow: inset 0px 0px 5px #c1c1c1;
+  box-shadow: inset 0px 0px 5px #c1c1c1;
+  outline: none;
 }
 
-.card > .img-container {
-  height: 60%;
-  overflow: hidden;
-  text-align: center;
-  background: #6caddc;
+.shake {
+  animation: shake 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  perspective: 1000px;
 }
 
-.card > .img-container > img {
-  width: 60%;
-}
-
-img {
-}
+/*img {
+  height: 80%;
+}*/
