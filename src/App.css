@@ -2,9 +2,52 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-column-gap: 1rem;
-
   grid-template-rows: 1fr 1fr 1fr;
   grid-row-gap: 1rem;
+}
+header {
+  width: 100%;
+}
+.logo {
+  height: 100%;
+  width: auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+li {
+  text-align: right;
+  list-style-type: none;
+  color: yellow;
+  font-size: 1.5em;
+}
+.lead {
+  text-align: center;
+}
+.card {
+  height: 100%;
+  width: auto;
+  overflow: hidden;
+}
+
+img {
+  display: block; /*remove inline-block spaces*/
+  width: 100%; /*make image streatch*/
+}
+
+.card:active {
+  background: #0429fc;
+  -webkit-box-shadow: inset 0px 0px 5px #c1c1c1;
+  -moz-box-shadow: inset 0px 0px 5px #c1c1c1;
+  box-shadow: inset 0px 0px 5px #c1c1c1;
+  outline: none;
+}
+
+.shake {
+  animation: shake 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  perspective: 1000px;
 }
 
 @keyframes shake {
