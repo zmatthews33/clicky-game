@@ -53,7 +53,6 @@ class App extends React.Component {
         wrongClick: false
       });
     } else {
-      // saving current score on a variable
       const saveScore = this.state.score;
       const newSimpsonsArr = this.shuffleArr(this.state.simpsonsArr);
 
