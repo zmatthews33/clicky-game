@@ -41,7 +41,6 @@ class App extends React.Component {
     });
 
     const { alt } = event.target;
-
     const currentClick = alt;
 
     if (currentClick !== this.state.previewsClick) {
@@ -58,22 +57,23 @@ class App extends React.Component {
 
       if (saveScore > this.state.topScore) {
         this.setState({
-          simpsonsArr: newSimpsonsArr,
-          previewsClick: currentClick,
-          score: 0,
-          topScore: saveScore,
-          wrongClick: true,
-          message: "Way to go, man!"
+          topScore: saveScore
         });
       }
-      this.setState({
+
+      this.setState(currentState => ({
         simpsonsArr: newSimpsonsArr,
         previewsClick: currentClick,
         score: 0,
-        wrongClick: true,
+        wrongClick: !currentState.wrongClick,
         message: "Doh!"
-      });
+      }));
     }
+    setTimeout(() => {
+      this.setState({
+        wrongClick: false
+      });
+    }, 200);
   };
 
   render() {

@@ -1,8 +1,6 @@
 import React from "react";
-//import "./style.css";
 
 export default function Card(props) {
-  // console.log(props)
   return (
     <div className="card btn" onClick={props.handleClick}>
       <img
