@@ -4,8 +4,8 @@ import React from "react";
 export default function Header(props) {
   return (
     <header>
-      <nav className="navbar purple darken-3 text-success sticky-top">
-        <ul className="container text-center">
+      <nav className="navbar blue darken-3 text-success sticky-top">
+        <ul className="container">
           <li className="nav-link">{props.message}</li>
           <li className="nav-link">
             Score: {props.score} | Top Score: {props.topScore}
