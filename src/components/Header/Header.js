@@ -23,7 +23,7 @@ export default function Header(props) {
         />
         <p className="lead">
           Click any character to begin. Try to use your memory and avoid
-          clicking the same image twice.
+          clicking the same image twice in a row.
         </p>
       </div>
     </header>
